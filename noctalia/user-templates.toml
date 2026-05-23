@@ -1,0 +1,47 @@
+[config]
+
+[templates]
+
+# User-defined templates
+# Add your custom templates below
+# Example:
+# [templates.myapp]
+# input_path = "~/.config/noctalia/templates/myapp.css"
+# output_path = "~/.config/myapp/theme.css"
+# post_hook = "myapp --reload-theme"
+
+# Remove this section and add your own templates
+#[templates.placeholder]
+#input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/noctalia.json"
+#output_path = "/home/shorin/.cache/noctalia/placeholder.json"
+
+[templates.fcitx5]
+input_path = '~/.config/noctalia/templates/fcitx5-ori-theme.conf'
+output_path = '~/.local/share/fcitx5/themes/OriDark/theme.conf'
+post_hook = 'fcitx5 -r & disown'
+
+[templates.fcitx5-ori-panel]
+input_path = '~/.config/noctalia/templates/fcitx5-ori-panel.svg'
+output_path = '~/.local/share/fcitx5/themes/OriDark/panel.svg'
+
+[templates.fcitx5-ori-highlight]
+input_path = '~/.config/noctalia/templates/fcitx5-ori-highlight.svg'
+output_path = '~/.local/share/fcitx5/themes/OriDark/highlight.svg'
+
+[templates.starship]
+input_path = '~/.config/noctalia/templates/starship-colors.toml'
+output_path = '~/.config/starship.toml'
+
+[templates.gtk-folder]
+input_path = '~/.config/noctalia/templates/gtk-folder/recolor.sh'
+output_path = '~/.cache/matugen/recoloricons.sh'
+post_hook = 'bash ~/.cache/matugen/recoloricons.sh'
+
+[templates.fastfetch]
+input_path = '~/.config/noctalia/templates/fastfetch-config.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'
+
+[templates.nvim-base16]
+input_path = '~/.config/noctalia/templates/nvim-base16.lua'
+output_path = '~/.config/nvim/lua/matugen.lua'
+post_hook = 'pkill -SIGUSR1 nvim'
